@@ -6,6 +6,13 @@
 // 5) Treat each member like a card
 
 
+const mainContainer = document.getElementById("main-container");
+const teamList = document.createElement("ul");
+const teamMember = document.createElement("li");
+mainContainer.append(teamList);
+teamList.append(teamMember);
+
+
 
 const ourTeam = [
     {
@@ -46,12 +53,13 @@ const ourTeam = [
     }
 ];
 
-console.log(ourTeam[0]);
-console.log(ourTeam[1]);
-console.log(ourTeam[2]);
-console.log(ourTeam[3]);
-console.log(ourTeam[4]);
-console.log(ourTeam[5]);
+
+for(let i = 0; i < ourTeam.length; i++) {
+    console.log(`Member Name: ${ourTeam[i].name}`)
+    console.log(`Member Surname: ${ourTeam[i].surname}`)
+    console.log(`Member Mansion: ${ourTeam[i].mansion}`)
+    console.log(`Member photo: ${ourTeam[i].photo}`)
+}
 
 
 
