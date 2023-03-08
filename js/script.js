@@ -7,8 +7,7 @@
 
 
 const mainContainer = document.getElementById("main-container");
-const teamList = document.createElement("ul");
-mainContainer.append(teamList);
+
 
 
 
