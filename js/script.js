@@ -68,6 +68,7 @@ function generateMember () {
         let teamMemberPhoto = document.createElement("img");
         teamMemberPhoto.src = ourTeam[i].photo;
         teamMemberPhoto.classList.add("card-picture");
+        teamMemberPhoto.classList.add("member-photo")
 
         let teamMemberName = document.createElement("h5");
         teamMemberName.textContent = `${ourTeam[i].name} ${ourTeam[i].surname}`
