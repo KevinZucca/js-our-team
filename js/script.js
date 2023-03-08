@@ -19,64 +19,69 @@ const ourTeam = [
         name: "Wayne",
         surname: "Barnett",
         mansion: "Founder & CEO",
-        photo: "wayne-barnett-founder-ceo.jpg"
+        photo: "img/wayne-barnett-founder-ceo.jpg"
     },
     {
         name: "Angela",
         surname: "Caroll",
         mansion: "Chief Editor",
-        photo:  "angela-caroll-chief-editor.jpg"
+        photo:  "img/angela-caroll-chief-editor.jpg"
     },
     {
         name: "Walter",
         surname: "Gordon",
         mansion: "Office Manager",
-        photo:  " walter-gordon-office-manager.jpg"
+        photo:  "img/walter-gordon-office-manager.jpg"
     },
     {
         name: "Angela",
         surname: "Lopez",
         mansion: "Social Media Manager",
-        photo:  "angela-lopez-social-media-manager.jpg"
+        photo:  "img/angela-lopez-social-media-manager.jpg"
     },
     {
         name: "Scott",
         surname: "Estrada",
         mansion: "Developer",
-        photo:  "scott-estrada-developer.jpg"
+        photo:  "img/scott-estrada-developer.jpg"
     },
     {
         name: "Barbara",
         surname: "Ramos",
         mansion: "Graphic Designer",
-        photo:  "barbara-ramos-graphic-designer.jpg"
+        photo:  "img/barbara-ramos-graphic-designer.jpg"
     }
 ];
 
 
     let listsOfMemebers = generateMember();
-    
-
-    
 
 //---------------- FUNCTIONS ------------------------------------------
 
 function generateMember () {
    
     for(let i = 0; i < ourTeam.length; i++) {
-        //create a new li every time
-        let teamMember = document.createElement("li");
-        //put inside the li the informations about the member of the team
-        teamMember.innerHTML =  
-        `<p>Member Name: ${ourTeam[i].name}</p>
-        <p>Member Surname: ${ourTeam[i].surname}</p>
-        <p>Member Mansion: ${ourTeam[i].mansion}</p>
-        <p>${ourTeam[i].photo}</p>`
+        //create a new div every time
+        let teamMemberCard = document.createElement("div");
+        teamMemberCard.classList.add("card");
+        //put inside the div the informations about the member of the team
+        let teamMemberPhoto = document.createElement("img");
+        teamMemberPhoto.src = ourTeam[i].photo;
+        teamMemberPhoto.classList.add("card-picture");
+        teamMemberCard.append(teamMemberPhoto);
 
-        //append the member of the team (every li) to the ul
-        teamList.append(teamMember)
+        let teamMemberName = document.createElement("p");
+        teamMemberName.textContent = "ciao"
+
+        // `<img src="${ourTeam[i].photo}">
+        // <p>${ourTeam[i].name} ${ourTeam[i].surname}</p>
+        // <p>${ourTeam[i].mansion}</p>`
+
+        //append the member of the team (every div) to the container
+        mainContainer.append(teamMember)
         console.log (teamMember)
-    };
+        
+    }
 }
 
 
