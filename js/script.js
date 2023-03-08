@@ -8,9 +8,9 @@
 
 const mainContainer = document.getElementById("main-container");
 const teamList = document.createElement("ul");
-const teamMember = document.createElement("li");
 mainContainer.append(teamList);
-teamList.append(teamMember);
+
+
 
 
 
@@ -54,12 +54,31 @@ const ourTeam = [
 ];
 
 
-for(let i = 0; i < ourTeam.length; i++) {
-    console.log(`Member Name: ${ourTeam[i].name}`)
-    console.log(`Member Surname: ${ourTeam[i].surname}`)
-    console.log(`Member Mansion: ${ourTeam[i].mansion}`)
-    console.log(`Member photo: ${ourTeam[i].photo}`)
+    let listsOfMemebers = generateMember();
+    
+
+    
+
+//---------------- FUNCTIONS ------------------------------------------
+
+function generateMember () {
+   
+    for(let i = 0; i < ourTeam.length; i++) {
+        //create a new li every time
+        let teamMember = document.createElement("li");
+        //put inside the li the informations about the member of the team
+        teamMember.innerHTML =  
+        `<p>Member Name: ${ourTeam[i].name}</p>
+        <p>Member Surname: ${ourTeam[i].surname}</p>
+        <p>Member Mansion: ${ourTeam[i].mansion}</p>
+        <p>${ourTeam[i].photo}</p>`
+
+        //append the member of the team (every li) to the ul
+        teamList.append(teamMember)
+        console.log (teamMember)
+    };
 }
+
 
 
 
