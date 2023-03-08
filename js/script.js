@@ -61,26 +61,25 @@ const ourTeam = [
 function generateMember () {
    
     for(let i = 0; i < ourTeam.length; i++) {
-        //create a new div every time
+        //create a new card every time
         let teamMemberCard = document.createElement("div");
         teamMemberCard.classList.add("card");
-        //put inside the div the informations about the member of the team
+        mainContainer.append(teamMemberCard)   
+       
         let teamMemberPhoto = document.createElement("img");
         teamMemberPhoto.src = ourTeam[i].photo;
         teamMemberPhoto.classList.add("card-picture");
-        teamMemberCard.append(teamMemberPhoto);
 
-        let teamMemberName = document.createElement("p");
-        teamMemberName.textContent = "ciao"
+        let teamMemberName = document.createElement("h5");
+        teamMemberName.textContent = `${ourTeam[i].name} ${ourTeam[i].surname}`
+        teamMemberName.classList.add("member-name")
 
-        // `<img src="${ourTeam[i].photo}">
-        // <p>${ourTeam[i].name} ${ourTeam[i].surname}</p>
-        // <p>${ourTeam[i].mansion}</p>`
+        let teamMemberMansion = document.createElement("p");
+        teamMemberMansion.textContent = `${ourTeam[i].mansion}`
+        teamMemberMansion.classList.add("mansion")  
 
-        //append the member of the team (every div) to the container
-        mainContainer.append(teamMember)
-        console.log (teamMember)
-        
+         //put inside the div the informations about the member of the team
+        teamMemberCard.append(teamMemberPhoto, teamMemberName, teamMemberMansion);
     }
 }
 

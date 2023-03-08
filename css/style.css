@@ -1,0 +1,39 @@
+body {
+    background-color: #c9c9c5;
+    color: #706a64;
+}
+
+header {
+    text-align: center;
+    padding: 25px;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#main-container {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 25px;
+}
+
+
+#main-container .card {
+    display: flex;
+    width: 25%;
+    font-size: 10px;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+    background-color: white;
+}
+
+.member-name {
+    margin-top: 10px;
+}
+
+
+.mansion {
+    font-size: 1.6em;
+}
