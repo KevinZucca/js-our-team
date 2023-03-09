@@ -75,7 +75,7 @@ function generateMember () {
         teamMemberName.classList.add("member-name")
 
         let teamMemberMansion = document.createElement("p");
-        teamMemberMansion.textContent = `${ourTeam[i].mansion}`
+        teamMemberMansion.textContent = ourTeam[i].mansion;
         teamMemberMansion.classList.add("mansion")  
 
          //put inside the div the informations about the member of the team
